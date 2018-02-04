@@ -1,5 +1,5 @@
 
-## Library Snapshots for Current Packages Used
+## Library Snapshots for Current Packages in Use
 
 **Status**
 
@@ -8,8 +8,8 @@
 <a href="https://travis-ci.org/petermeissner/librarysnapshot">
 <img src="https://api.travis-ci.org/petermeissner/librarysnapshot.svg?branch=master">
 <a/> <a href="https://cran.r-project.org/package=librarysnapshot">
-<img src="http://www.r-pkg.org/badges/version/librarysnapshot"> </a>
-<a href="https://codecov.io/gh/petermeissner/librarysnapshot">
+<img src="http://www.r-pkg.org/badges/version/librarysnapshot">
+</a><a href="https://codecov.io/gh/petermeissner/librarysnapshot">
 <img src="https://codecov.io/gh/petermeissner/librarysnapshot/branch/master/graph/badge.svg" alt="Codecov" />
 </a>
 <img src="http://cranlogs.r-pkg.org/badges/grand-total/librarysnapshot">
@@ -17,16 +17,18 @@
 
 **Development version**
 
-0.1.0 - 2018-02-04 / 21:24:52
+0.1.0 - 2018-02-04 / 21:40:19
 
 **Description**
 
-More about what it does (maybe more than one line) Use four spaces when
-indenting paragraphs within the Description.
+Generate a local library copy with relevant packages. All packages
+currently found within the search path - except base packages - will be
+copied to the directory provided and can be used later on with the
+‘.libPaths()’ function.
 
 **License**
 
-What license is it under? <br>Who wrote it
+MIT + file LICENSE <br>Peter Meissner \[aut, cre\]
 
 **Citation**
 

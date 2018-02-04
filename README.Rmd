@@ -47,12 +47,9 @@ length.cpp   <- length(grep("(^\\s*$)|(^\\s*#)|(^\\s*//)", lines.cpp,  value = T
 <a/>
 <a href="https://cran.r-project.org/package=librarysnapshot">
 <img src="http://www.r-pkg.org/badges/version/librarysnapshot">
-</a>
-<a href="https://codecov.io/gh/petermeissner/librarysnapshot">
+</a><a href="https://codecov.io/gh/petermeissner/librarysnapshot">
   <img src="https://codecov.io/gh/petermeissner/librarysnapshot/branch/master/graph/badge.svg" alt="Codecov" />
-</a>
-<img src="http://cranlogs.r-pkg.org/badges/grand-total/librarysnapshot">
-<img src="http://cranlogs.r-pkg.org/badges/librarysnapshot">
+</a> <img src="http://cranlogs.r-pkg.org/badges/grand-total/librarysnapshot"> <img src="http://cranlogs.r-pkg.org/badges/librarysnapshot">
 
 
 
