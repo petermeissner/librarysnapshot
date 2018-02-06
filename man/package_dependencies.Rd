@@ -11,6 +11,10 @@ package_dependencies(pkg, env = NULL, dependency_type = c("depends",
 \item{pkg}{the pacakge to resolve dependencies for}
 
 \item{env}{an environment to store results in, is primarily used for recursion}
+
+\item{dependency_type}{the dependency types to include, e.g.
+"depends", "imports", "linkingto", "suggests" -- will leave out suggests by
+default}
 }
 \description{
 package_dependencies
