@@ -157,3 +157,18 @@ library(librarysnapshot)
 
 
 
+## Example Usage
+
+```{r}
+library(librarysnapshot)
+
+sessionInfo()
+
+path     <- paste(tempdir(), "rlib", sep="/")
+snapshot <- library_snapshot(path = path)
+
+snapshot[, c("Package", "Version", "Depends", "Imports")]
+
+list.files(path)
+```
+

@@ -15,20 +15,22 @@
 #' }
 #'
 #'
-library_snapshot <- function(path = "rlib"){
+library_snapshot <- function( path = tempdir() ){
 
-  # get packages
-  packages <- utils::sessionInfo()
-  packages_other  <- names(packages$otherPkgs)
-  packages_loaded <- names(packages$loadedOnly)
+  packages <- session_dependencies()
 
   # copy packages
+  if ( dir.exists(path) ){
+    unlink(path, recursive = TRUE)
+  }
   dir.create(path = path, showWarnings = FALSE, recursive = TRUE)
+
+
   package_paths <-
-    vapply(
-      X         = c(packages_other, packages_loaded),
+    mapply(
       FUN       =
         function(pkg_name, path){
+          cat(".")
           package_path_from <- system.file(package = pkg_name)
           file.copy(
             from      = package_path_from,
@@ -37,11 +39,15 @@ library_snapshot <- function(path = "rlib"){
           )
           return(package_path_from)
         },
-      FUN.VALUE = character(1),
+      pkg_name  = packages$Package,
       path      = path,
-      USE.NAMES = FALSE
+      USE.NAMES = FALSE,
+      SIMPLIFY  = FALSE
     )
 
+  packages$path_from <- unlist(package_paths)
+  packages$path_to   <- paste(path, basename(unlist(package_paths)), sep="/")
+
   # return
-  return(package_paths)
+  return(packages)
 }

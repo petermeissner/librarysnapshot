@@ -4,7 +4,7 @@
 \alias{library_snapshot}
 \title{library_snapshot}
 \usage{
-library_snapshot(path = "rlib")
+library_snapshot(path = tempdir())
 }
 \arguments{
 \item{path}{path to which to make copy to}
