@@ -4,21 +4,26 @@
 \alias{library_snapshot}
 \title{library_snapshot}
 \usage{
-library_snapshot(path = tempdir())
+library_snapshot(path = NULL)
 }
 \arguments{
-\item{path}{path to which to make copy to}
+\item{path}{path to which to copy packages to; if NULL}
 }
 \value{
 Returns the paths from which packages were copied
 }
 \description{
-Make a local copy of the currently used packeges from the currently used library.
+Make a local copy of the currently used packeges within the session
+from the currently used library.
 }
 \examples{
 \dontrun{
 
+
+library_snapshot()
+
 library_snapshot(path = tempdir())
+
 
 }
 

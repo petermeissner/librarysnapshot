@@ -3,7 +3,7 @@
 
 **Status**
 
-*lines of R code:* 119, *lines of test code:* 0
+*lines of R code:* 121, *lines of test code:* 19
 
 <a href="https://travis-ci.org/petermeissner/librarysnapshot">
 <img src="https://api.travis-ci.org/petermeissner/librarysnapshot.svg?branch=master">
@@ -17,7 +17,7 @@
 
 **Development version**
 
-0.1.0 - 2018-02-06 / 21:59:38
+0.1.0 - 2018-02-07 / 19:45:52
 
 **Description**
 
@@ -117,9 +117,9 @@ sessionInfo()
 ## [1] librarysnapshot_0.1.0
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] compiler_3.4.3  backports_1.1.2 magrittr_1.5    rprojroot_1.3-1 tools_3.4.3     htmltools_0.3.6
-##  [7] yaml_2.1.16     Rcpp_0.12.14    stringi_1.1.6   rmarkdown_1.8   knitr_1.17      stringr_1.2.0  
-## [13] digest_0.6.13   evaluate_0.10.1
+##  [1] compiler_3.4.3  backports_1.1.2 magrittr_1.5    rprojroot_1.3-2 tools_3.4.3     htmltools_0.3.6
+##  [7] yaml_2.1.16     Rcpp_0.12.15    stringi_1.1.6   rmarkdown_1.8   knitr_1.19      stringr_1.2.0  
+## [13] digest_0.6.15   evaluate_0.10.1
 
 path     <- paste(tempdir(), "rlib", sep="/")
 snapshot <- library_snapshot(path = path)
@@ -129,19 +129,19 @@ snapshot[, c("Package", "Version", "Depends", "Imports")]
 ##                         Package Version       Depends
 ## backports             backports   1.1.2  R (>= 3.0.0)
 ## base64enc             base64enc   0.1-3  R (>= 2.9.0)
-## digest                   digest  0.6.13  R (>= 2.4.1)
+## digest                   digest  0.6.15  R (>= 2.4.1)
 ## evaluate               evaluate  0.10.1  R (>= 3.0.2)
 ## highr                     highr     0.6  R (>= 3.0.2)
 ## htmltools             htmltools   0.3.6 R (>= 2.14.1)
 ## jsonlite               jsonlite     1.5       methods
-## knitr                     knitr    1.17  R (>= 3.1.0)
+## knitr                     knitr    1.19  R (>= 3.1.0)
 ## librarysnapshot librarysnapshot   0.1.0          <NA>
 ## magrittr               magrittr     1.5          <NA>
 ## markdown               markdown     0.8 R (>= 2.11.1)
 ## mime                       mime     0.5          <NA>
-## Rcpp                       Rcpp 0.12.14  R (>= 3.0.0)
+## Rcpp                       Rcpp 0.12.15  R (>= 3.0.0)
 ## rmarkdown             rmarkdown     1.8    R (>= 3.0)
-## rprojroot             rprojroot   1.3-1  R (>= 3.0.0)
+## rprojroot             rprojroot   1.3-2  R (>= 3.0.0)
 ## stringi                 stringi   1.1.6   R (>= 2.14)
 ## stringr                 stringr   1.2.0   R (>= 2.14)
 ## yaml                       yaml  2.1.16          <NA>
@@ -153,7 +153,7 @@ snapshot[, c("Package", "Version", "Depends", "Imports")]
 ## highr                                                                                                                                                                   <NA>
 ## htmltools                                                                                                                                                utils, digest, Rcpp
 ## jsonlite                                                                                                                                                                <NA>
-## knitr                                                                                   evaluate (>= 0.10), digest, highr, markdown, stringr (>= 0.6),\nyaml, methods, tools
+## knitr                                                                                           evaluate (>= 0.10), highr, markdown, stringr (>= 0.6), yaml,\nmethods, tools
 ## librarysnapshot                                                                                                                                                        utils
 ## magrittr                                                                                                                                                                <NA>
 ## markdown                                                                                                                                                utils, mime (>= 0.3)

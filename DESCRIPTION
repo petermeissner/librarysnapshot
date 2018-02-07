@@ -1,7 +1,8 @@
 Package: librarysnapshot
+Date: 2018-02-07
+Version: 0.1.1
 Type: Package
 Title: Library Snapshots for Current Packages in Use
-Version: 0.1.0
 Authors@R: c(
         person(
           "Peter", "Meissner", role = c("aut", "cre"),
@@ -18,4 +19,7 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
 Imports: utils
-Suggests: covr
+URL: https://github.com/petermeissner/librarysnapshot
+BugReports: https://github.com/petermeissner/librarysnapshot/issues
+Suggests: covr,
+    testthat
