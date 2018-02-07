@@ -8,7 +8,7 @@ package_dependencies(pkg, env = NULL, dependency_type = c("depends",
   "imports", "linkingto"))
 }
 \arguments{
-\item{pkg}{the pacakge to resolve dependencies for}
+\item{pkg}{the package to resolve dependencies for}
 
 \item{env}{an environment to store results in, is primarily used for recursion}
 

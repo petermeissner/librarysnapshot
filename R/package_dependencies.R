@@ -1,6 +1,6 @@
 #' package_dependencies
 #'
-#' @param pkg the pacakge to resolve dependencies for
+#' @param pkg the package to resolve dependencies for
 #' @param env an environment to store results in, is primarily used for recursion
 #' @param dependency_type the dependency types to include, e.g.
 #'   "depends", "imports", "linkingto", "suggests" -- will leave out suggests by

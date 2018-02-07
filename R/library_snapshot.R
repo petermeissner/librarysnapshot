@@ -1,6 +1,6 @@
 #' library_snapshot
 #'
-#' Make a local copy of the currently used packeges within the session
+#' Make a local copy of the currently used packages within the session
 #' from the currently used library.
 #'
 #' @param path path to which to copy packages to; if NULL

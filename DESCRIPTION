@@ -2,7 +2,7 @@ Package: librarysnapshot
 Date: 2018-02-07
 Version: 0.1.1
 Type: Package
-Title: Library Snapshots for Current Packages in Use
+Title: Library Snapshot for Packages and Dependencies in Use by Current Session
 Authors@R: c(
         person(
           "Peter", "Meissner", role = c("aut", "cre"),

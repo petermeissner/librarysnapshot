@@ -13,7 +13,7 @@ library_snapshot(path = NULL)
 Returns the paths from which packages were copied
 }
 \description{
-Make a local copy of the currently used packeges within the session
+Make a local copy of the currently used packages within the session
 from the currently used library.
 }
 \examples{
