@@ -1,6 +1,6 @@
 Package: librarysnapshot
-Date: 2018-02-07
-Version: 0.1.1
+Date: 2018-02-12
+Version: 0.1.2
 Type: Package
 Title: Library Snapshot for Packages and Dependencies in Use by Current Session
 Authors@R: c(
@@ -13,7 +13,7 @@ Maintainer: Peter Meissner <retep.meissner@gmail.com>
 Description: Generate a local library copy with relevant packages. 
     All packages currently found within the search path - except base packages - 
     will be copied to the directory provided and can be used later on with the 
-    '.libPaths()' function. 
+    .libPaths() function. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
