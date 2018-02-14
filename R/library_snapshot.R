@@ -4,6 +4,8 @@
 #' from the currently used library.
 #'
 #' @param path path to which to copy packages to; if NULL
+#' @param copy.mode passed through to file.copy
+#' @param write_list adds package information csv-file to path; needs path to be set
 #'
 #' @return Returns the paths from which packages were copied
 #' @export
@@ -20,7 +22,12 @@
 #' }
 #'
 #'
-library_snapshot <- function( path = NULL){
+library_snapshot <-
+  function(
+    path       = NULL,
+    write_list = TRUE,
+    copy.mode  = TRUE
+  ){
 
   # resolve dependencies
   packages <- session_dependencies()
@@ -38,7 +45,9 @@ library_snapshot <- function( path = NULL){
             file.copy(
               from      = package_path_from,
               to        = path,
-              recursive = TRUE
+              recursive = TRUE,
+              overwrite = TRUE,
+              copy.mode = copy.mode
             )
             return(package_path_from)
           },
@@ -51,6 +60,15 @@ library_snapshot <- function( path = NULL){
     # store additional inforamtion in packages data.frame
     packages$path_from <- unlist(package_paths)
     packages$path_to   <- paste(path, basename(unlist(package_paths)), sep="/")
+
+    # write package information to file
+    if ( write_list ){
+      write.csv(
+        x         = packages,
+        file      = paste(path, "package_list.csv", sep = "/"),
+        row.names = FALSE
+      )
+    }
 
   }else{
 

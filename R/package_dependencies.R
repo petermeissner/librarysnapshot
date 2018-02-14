@@ -62,8 +62,8 @@ package_dependencies <-
     packages <-
       unlist(strsplit(x = packages, split = " *, *"))
 
-    env$pkg      <- sort(unique(c(pkg, env$pkg)))
-    env$packages <- sort(unique(c(packages, env$packages)))
+    env$pkg      <- unique(c(pkg, env$pkg))
+    env$packages <- unique(c(packages, env$packages))
     env$packages <- env$packages[env$packages != ""]
 
     package_dependencies(packages, env = env)

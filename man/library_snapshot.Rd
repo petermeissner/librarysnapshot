@@ -4,10 +4,12 @@
 \alias{library_snapshot}
 \title{library_snapshot}
 \usage{
-library_snapshot(path = NULL)
+library_snapshot(path = NULL, copy.mode = TRUE)
 }
 \arguments{
 \item{path}{path to which to copy packages to; if NULL}
+
+\item{copy.mode}{passed through to file.copy}
 }
 \value{
 Returns the paths from which packages were copied
