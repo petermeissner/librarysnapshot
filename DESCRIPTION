@@ -1,6 +1,6 @@
 Package: librarysnapshot
-Date: 2018-02-12
-Version: 0.1.2
+Date: 2018-02-16
+Version: 0.1.3
 Type: Package
 Title: Library Snapshot for Packages and Dependencies in Use by Current Session
 Authors@R: c(

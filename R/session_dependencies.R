@@ -57,19 +57,11 @@ session_dependencies <-
 
 
     # filter out not used packages (+base packages)
-    iffer <-
-      if( exclude_base == TRUE ){
-        rownames(packages_df) %in% package_names &
-          is.na(packages_df$Priority)
-      }else{
-        rownames(packages_df) %in% package_names
-      }
-
-    packages_df       <- packages_df[iffer, ]
-
-    # add order variable
-    packages_df$order <- seq_len(nrow(packages_df))
+    if( exclude_base == TRUE ){
+      packages_df       <- packages_df[is.na(packages_df$Priority), ]
+    }
 
     # return
+    packages_df$order <- seq_len(nrow(packages_df))
     packages_df
   }

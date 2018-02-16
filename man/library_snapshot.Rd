@@ -4,12 +4,17 @@
 \alias{library_snapshot}
 \title{library_snapshot}
 \usage{
-library_snapshot(path = NULL, copy.mode = TRUE)
+library_snapshot(path = NULL, write_list = TRUE, copy.mode = TRUE,
+  exclude_base = TRUE)
 }
 \arguments{
 \item{path}{path to which to copy packages to; if NULL}
 
+\item{write_list}{adds package information csv-file to path; needs path to be set}
+
 \item{copy.mode}{passed through to file.copy}
+
+\item{exclude_base}{should 'base' R packages be excluded or not}
 }
 \value{
 Returns the paths from which packages were copied

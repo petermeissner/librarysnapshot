@@ -6,6 +6,7 @@
 #' @param path path to which to copy packages to; if NULL
 #' @param copy.mode passed through to file.copy
 #' @param write_list adds package information csv-file to path; needs path to be set
+#' @param exclude_base should 'base' R packages be excluded or not
 #'
 #' @return Returns the paths from which packages were copied
 #' @export
@@ -24,13 +25,14 @@
 #'
 library_snapshot <-
   function(
-    path       = NULL,
-    write_list = TRUE,
-    copy.mode  = TRUE
+    path         = NULL,
+    write_list   = TRUE,
+    copy.mode    = TRUE,
+    exclude_base = TRUE
   ){
 
   # resolve dependencies
-  packages <- session_dependencies()
+  packages <- session_dependencies(exclude_base = exclude_base)
 
   # copy packages
   if( !is.null(path) ){
@@ -64,7 +66,7 @@ library_snapshot <-
     # write package information to file
     if ( write_list ){
       write.csv(
-        x         = packages,
+        x         = packages[, c("Package", "Version")],
         file      = paste(path, "package_list.csv", sep = "/"),
         row.names = FALSE
       )
